@@ -3,7 +3,7 @@ header {
 	background: #303F9F;
 	background-position: center center;
 	position: fixed;
-	display: flex;
+
 }
 
 navbar {
@@ -11,13 +11,13 @@ navbar {
 	background: #303F9F;
 	background-position: center center;
 	position: fixed;
-	display: flex;
+
 }
 
 body {
 	font-family: 'Slabo+27px', serif;
 	margin: 0px auto;
-	background: #3F51B5;
+	background: #448AFF;
 	position: center center;
 	text-align: center;
 	color: #FFFFFF;
