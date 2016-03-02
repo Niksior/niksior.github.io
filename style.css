@@ -2,8 +2,10 @@ header {
 	font-family: 'Arial';
 	text-transform: uppercase;
 	background: #3F51B5;
+	background-position: center center;
 	position: fixed;
 	width: 70%;
+	left: 15%;
 	padding: 20px;
 	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
 }
@@ -12,9 +14,11 @@ header {
 	font-family: 'Arial';
 	text-transform: uppercase;
 	background: #3F51B5;
+	background-position: center center;
 	position: fixed;
 	width: 70%;
 	top: 40px;
+	left: 15%;
 	padding: 10px;
 	transition: padding 0.3s linear 0s, top 0.3s linear 0s;
 }
@@ -22,6 +26,8 @@ header {
 #blok {
 	background: #448AFF;
 	width: 70%;
+	top: 100px;
+	left: 15%;
 }
 
 body {
