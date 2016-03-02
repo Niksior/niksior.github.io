@@ -3,15 +3,20 @@ header {
 	background: #3F51B5;
 	background-position: center center;
 	position: fixed;
-
+	width: 100%;
+	padding: 20px;
+	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
 }
 
-navbar {
+#navbar {
 	font-family: 'Arial';
 	background: #3F51B5;
 	background-position: center center;
 	position: fixed;
-
+	width: 100%;
+	top: 5%;
+	padding: 10px;
+	transition: padding 0.3s linear 0s, top 0.3s linear 0s;
 }
 
 body {
