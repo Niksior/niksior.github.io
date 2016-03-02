@@ -1,14 +1,14 @@
 header {
 	font-family: 'Arial';
 	background: #303F9F;
-	background-position: top center;
+	background-position: center center;
 	position: fixed;
 }
 
 navbar {
 	font-family: 'Arial';
 	background: #303F9F;
-	background-position: top center;
+	background-position: center center;
 	position: fixed;
 }
 
@@ -18,4 +18,5 @@ body {
 	background: #3F51B5;
 	position: center center;
 	text-align: center;
+	color: #FFFFFF;
 }
