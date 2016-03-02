@@ -1,5 +1,6 @@
 header {
 	font-family: 'Arial';
+	text-transform: uppercase;
 	background: #3F51B5;
 	background-position: center center;
 	position: fixed;
@@ -11,6 +12,7 @@ header {
 
 #navbar {
 	font-family: 'Arial';
+	text-transform: uppercase;
 	background: #3F51B5;
 	background-position: center center;
 	position: fixed;
