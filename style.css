@@ -4,8 +4,8 @@ header {
 	background: #3F51B5;
 	background-position: center center;
 	position: fixed;
-	width: 100%;
-	padding: 15px;
+	width: 70%;
+	padding: 20px;
 	text-align: center;
 	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
 }
@@ -16,9 +16,9 @@ header {
 	background: #3F51B5;
 	background-position: center center;
 	position: fixed;
-	width: 100%;
+	width: 70%;
 	text-align: center;
-	top: 10%;
+	top: 40px;
 	padding: 10px;
 	transition: padding 0.3s linear 0s, top 0.3s linear 0s;
 }
@@ -30,4 +30,5 @@ body {
 	position: center center;
 	text-align: center;
 	color: #FFFFFF;
+	width: 70%;
 }
