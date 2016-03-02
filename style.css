@@ -3,6 +3,7 @@ header {
 	background: #303F9F;
 	background-position: center center;
 	position: fixed;
+	display: flex;
 }
 
 navbar {
@@ -10,6 +11,7 @@ navbar {
 	background: #303F9F;
 	background-position: center center;
 	position: fixed;
+	display: flex;
 }
 
 body {
