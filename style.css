@@ -2,11 +2,9 @@ header {
 	font-family: 'Arial';
 	text-transform: uppercase;
 	background: #3F51B5;
-	background-position: center center;
 	position: fixed;
 	width: 70%;
 	padding: 20px;
-	text-align: center;
 	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
 }
 
@@ -14,21 +12,23 @@ header {
 	font-family: 'Arial';
 	text-transform: uppercase;
 	background: #3F51B5;
-	background-position: center center;
 	position: fixed;
 	width: 70%;
-	text-align: center;
 	top: 40px;
 	padding: 10px;
 	transition: padding 0.3s linear 0s, top 0.3s linear 0s;
 }
 
+#blok {
+	background: #448AFF;
+	width: 70%;
+}
+
 body {
 	font-family: 'Slabo+27px', serif;
 	margin: 0px auto;
-	background: #448AFF;
+	background: #FFFFFF;
 	position: center center;
 	text-align: center;
 	color: #FFFFFF;
-	width: 70%;
 }
