@@ -1,5 +1,6 @@
+<script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Slabo+27px::latin' ] }
+    google: { families: [ 'Raleway:600:latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -8,4 +9,4 @@
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
-  })();
+  })(); </script>
