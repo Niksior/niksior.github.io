@@ -2,6 +2,7 @@ header {
 	text-transform: uppercase;
 	background: #673ab7;
 	background-position: center center;
+	color: #ffff00;
 	position: fixed;
 	width: 70%;
 	left: 15%;
@@ -13,7 +14,7 @@ header {
 
 #navbar {
 	text-transform: uppercase;
-	background: #9575cd;
+	background: #512da8;
 	background-position: center center;
 	position: fixed;
 	width: 70%;
@@ -27,7 +28,7 @@ header {
 
 #blok {
 	
-	background: #512da8;
+	background: #9575cd;
 	width: 70%;
 	margin-left: 15%;
 	padding-top: 135px;
@@ -37,8 +38,8 @@ header {
 body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0px auto;
-	background: #cfd8dc;
+	background: #ffffff;
 	position: center center;
 	text-align: center;
-	color: #FFFFFF;
+	color: #000000;
 }
