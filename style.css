@@ -1,5 +1,4 @@
 header {
-	font-family: 'Arial';
 	text-transform: uppercase;
 	background: #3F51B5;
 	background-position: center center;
@@ -13,7 +12,6 @@ header {
 }
 
 #navbar {
-	font-family: 'Arial';
 	text-transform: uppercase;
 	background: #3F51B5;
 	background-position: center center;
@@ -37,7 +35,7 @@ header {
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0px auto;
 	background: #ffffc1;
 	position: center center;
