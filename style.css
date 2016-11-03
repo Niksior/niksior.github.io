@@ -2,7 +2,7 @@ header {
 	text-transform: uppercase;
 	background: #673ab7;
 	background-position: center center;
-	color: #ffff00;
+	color: #ffffff;
 	position: fixed;
 	width: 70%;
 	left: 15%;
@@ -38,7 +38,7 @@ header {
 body {
 	font-family: 'Roboto', sans-serif;
 	margin: 0px auto;
-	background: #fbe9e7;
+	background: #ffffff;
 	position: center center;
 	text-align: center;
 	color: #000000;
