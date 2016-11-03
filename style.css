@@ -15,6 +15,7 @@ header {
 #navbar {
 	text-transform: uppercase;
 	background: #512da8;
+	color: #ffffff;
 	background-position: center center;
 	position: fixed;
 	width: 70%;
