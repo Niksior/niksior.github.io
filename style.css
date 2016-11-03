@@ -5,10 +5,9 @@ header {
 	color: #ffffff;
 	position: fixed;
 	width: 100%;
-	left: 15%;
-	padding-top: 20px;
-	height: 70px;
-	font-size: 40px;
+	padding-top: 1%;
+	height: 10%;
+	font-size: 250%;
 	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
 }
 
@@ -19,11 +18,10 @@ header {
 	background-position: center center;
 	position: fixed;
 	width: 100%;
-	padding-top: 15px;
-	top: 90px;
-	left: 15%;
-	height: 40px;
-	font-size: 20px;
+	padding-top: 1%;
+	top: 10%;
+	height: 5%;
+	font-size: 125%;
 	transition: padding 0.3s linear 0s, top 0.3s linear 0s;
 }
 
@@ -32,7 +30,7 @@ header {
 	background: #ffffff;
 	width: 70%;
 	margin-left: 15%;
-	padding-top: 135px;
+	padding-top: 15%;
 	
 }
 
