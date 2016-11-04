@@ -3,12 +3,13 @@ header {
 	background: #673ab7;
 	background-position: center center;
 	color: #ffffff;
-	position: fixed;
+	top: 0%;
 	width: 100%;
 	padding-top: 1%;
+	padding-bottom: 1%;
 	height: 10%;
 	font-size: 250%;
-	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
+	position: static;
 }
 
 #navbar {
@@ -16,22 +17,20 @@ header {
 	background: #512da8;
 	color: #ffffff;
 	background-position: center center;
-	position: fixed;
+	position: sticky;
 	width: 100%;
 	padding-top: 1%;
+	padding-bottom: 1%;
 	top: 10%;
 	height: 5%;
 	font-size: 125%;
-	transition: padding 0.3s linear 0s, top 0.3s linear 0s;
 }
 
 #blok {
-	
 	background: #ffffff;
-	
 	width: 70%;
 	margin-left: 15%;
-	padding-top: 10%;
+	padding-top: 2%;
 }
 
 body {
