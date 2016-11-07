@@ -19,11 +19,9 @@ header {
 	background-position: center center;
 	position: sticky;
 	width: 100%;
-	padding-top: 1%;
-	padding-bottom: 1%;
 	top: 10%;
 	height: 5%;
-	font-size: 125%;
+	font-size: 200%;
 }
 
 #blok {
@@ -40,4 +38,15 @@ body {
 	position: center center;
 	text-align: center;
 	color: #000000;
+}
+
+#navbar a{
+	padding-left: 1%;
+	padding-right: 1%;
+	display: inline-block;
+}
+
+#navbar a:hover{
+	background: #ffffff;
+	color: #512da8;
 }

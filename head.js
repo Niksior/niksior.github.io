@@ -4,7 +4,6 @@ function yScroll(){
 	pgTop = document.getElementById('gora');
 	yPos = window.pageYOffset;
 	tB = document.getElementById('navbar');
-	console.log(pgTop);
 	
 	if(yPos){
 		tB.style.top = "0%";
