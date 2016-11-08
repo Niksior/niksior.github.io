@@ -7,20 +7,26 @@ header {
 	width: 100%;
 	padding-top: 1%;
 	padding-bottom: 1%;
-	height: 10%;
+	height: 80px;
 	font-size: 250%;
 	position: static;
 }
 
 #navbar {
+	background: #512da8;
+	position: relative;
+	width: 100%;
+	height: 38px;
+}
+
+#navbar2 {
 	text-transform: uppercase;
 	background: #512da8;
 	color: #ffffff;
 	background-position: center center;
-	position: relative;
+	position: fixed;
 	width: 100%;
-	top: 10%;
-	height: 5%;
+	top: 114px;
 	font-size: 200%;
 }
 
@@ -47,6 +53,17 @@ body {
 }
 
 #navbar a:hover{
+	background: #ffffff;
+	color: #512da8;
+}
+
+#navbar2 a{
+	padding-left: 1%;
+	padding-right: 1%;
+	display: inline-block;
+}
+
+#navbar2 a:hover{
 	background: #ffffff;
 	color: #512da8;
 }

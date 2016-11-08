@@ -1,20 +1,17 @@
-var pgTop, yPos, tB;
+var yPos, tB;
 
 function yScroll(){
-	pgTop = document.getElementById('gora');
 	yPos = window.pageYOffset;
-	tB = document.getElementById('navbar');
-	
-	if(yPos){
-		//tB.style.top = "0%";
-		tB.style.position = "fixed";
+	tB = document.getElementById('navbar2');
+	var t;
+	if(yPos > 114){
+		tB.style.top = "0px";
 	}
 
 	else  {
-		//tB.style.top = "10%";
-		tB.style.position = "relative";
+		t=114-yPos;
+		tB.style.top = t+"px";
 	}
-	console.log(yPos);
 }
 
-window.addEventListener("scroll", yScroll);
+window.addEventListener("scroll", yScroll); //114
