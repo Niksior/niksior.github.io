@@ -4,12 +4,12 @@ function yScroll(){
 	yPos = window.pageYOffset;
 	tB = document.getElementById('navbar2');
 	var t;
-	if(yPos > 114){
+	if(yPos > 112){
 		tB.style.top = "0px";
 	}
 
 	else  {
-		t=114-yPos;
+		t=112-yPos;
 		tB.style.top = t+"px";
 	}
 }
