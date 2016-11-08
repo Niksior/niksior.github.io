@@ -29,6 +29,9 @@ body {
 
 #navbar {
 	background: #512da8;
+	text-transform: uppercase;
+	color: #512da8;
+	background-position: center center;
 	position: relative;
 	font-size: 220%;
 	width: 100%;
