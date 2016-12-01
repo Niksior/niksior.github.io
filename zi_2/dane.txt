@@ -25,3 +25,6 @@ animHandler.add( animation );
 kfAnimation = new THREE.KeyFrameAnimation( animation.node, animation.name );
 kfAnimation.timeScale = 1;
 kfAnimation.play( true, 0 );
+
+
+http://rmx.github.io/collada-converter/preview/examples/convert.html
