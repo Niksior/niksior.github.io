@@ -39,7 +39,7 @@
                
                 break;
             case 38: console.log("up down");
-                xu += 1;
+                yu -= 10;
 
                 break;
             case 39: console.log("right down");
@@ -47,7 +47,7 @@
 
                 break;
             case 40: console.log("down down");
-                xu -= 1;
+                yu += 10;
 
                 break;
         }
@@ -81,8 +81,9 @@
     var scene = new THREE.Scene();
 
     var camera = new THREE.PerspectiveCamera(50, WIDTH / HEIGHT, 0.1, 10000);
-    camera.position.z = 500;
-    camera.position.x = 0;
+    camera.position.z = 300;
+    camera.position.y = -600;
+    camera.rotation.x = 1;
     scene.add(camera);
 
     var cloader = new THREE.ColladaLoader();
@@ -90,7 +91,7 @@
         sofa = collada.scene;
         sofa.position.set(0,-20,0);
         sofa.scale.set(20, 20, 20);
-        sofa.rotation.x = 0.45;
+        sofa.rotation.x = 1.7;
         sofa.rotation.y = 0;
         sofa.rotation.z = 0;
         sofa.updateMatrix();
@@ -106,14 +107,14 @@
     var Material = new THREE.MeshBasicMaterial({ map: Texture, side: THREE.DoubleSide });
     var Geometry = new THREE.PlaneGeometry(2000, 5000, 1, 1);
     var plane = new THREE.Mesh(Geometry, Material);
-    plane.rotation.set(90, 0, 0);
+    //plane.rotation.set(90, 0, 0);
     plane.position.set(900, 0, 0);
     //plane.material.map.offset.y = 1.5;
     scene.add(plane);
 
     function render() {
         plane.rotation.z = zu;
-        plane.position.x = xu;
+        plane.position.y = yu;
         requestAnimationFrame(render);
         renderer.render(scene, camera);
     }
