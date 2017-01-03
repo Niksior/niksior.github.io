@@ -35,19 +35,19 @@
         var keycode = event.keyCode;
         switch (keycode) {
             case 37: console.log("left down");
-                zu += 0.01;
+                zu -= 0.01;
                
                 break;
             case 38: console.log("up down");
-                yu -= 10;
+                xu -= 10;
 
                 break;
             case 39: console.log("right down");
-                zu -= 0.01;
+                zu += 0.01;
 
                 break;
             case 40: console.log("down down");
-                yu += 10;
+                xu += 10;
 
                 break;
         }
@@ -89,11 +89,9 @@
     var cloader = new THREE.ColladaLoader();
     cloader.load('mu/mustang.DAE', function (collada) {
         sofa = collada.scene;
-        sofa.position.set(0,-20,0);
+        sofa.position.set(0, 0, 0);
         sofa.scale.set(20, 20, 20);
         sofa.rotation.x = 1.7;
-        sofa.rotation.y = 0;
-        sofa.rotation.z = 0;
         sofa.updateMatrix();
         scene.add(sofa);
         }, function ( xhr ) {console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );}
@@ -104,17 +102,21 @@
     scene.add(light);
 
     var Texture = new THREE.TextureLoader().load("tor.png");
+    Texture.wrapS = THREE.RepeatWrapping;
+    Texture.wrapT = THREE.RepeatWrapping;
+   
     var Material = new THREE.MeshBasicMaterial({ map: Texture, side: THREE.DoubleSide });
     var Geometry = new THREE.PlaneGeometry(2000, 5000, 1, 1);
     var plane = new THREE.Mesh(Geometry, Material);
-    //plane.rotation.set(90, 0, 0);
-    plane.position.set(900, 0, 0);
-    //plane.material.map.offset.y = 1.5;
+    plane.position.set(0, 0, 0);
+    //plane.material.map.offset.x = 200;
     scene.add(plane);
 
+    
+
     function render() {
+        plane.material.map.offset.z = xu;
         plane.rotation.z = zu;
-        plane.position.y = yu;
         requestAnimationFrame(render);
         renderer.render(scene, camera);
     }
