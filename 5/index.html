@@ -86,7 +86,7 @@
     scene.add(camera);
 
     var cloader = new THREE.ColladaLoader();
-    cloader.load('/mu/mustang.DAE', function (collada) {
+    cloader.load('mu/mustang.DAE', function (collada) {
         sofa = collada.scene;
         sofa.position.set(0,-20,0);
         sofa.scale.set(20, 20, 20);
