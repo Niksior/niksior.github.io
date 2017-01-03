@@ -1,0 +1,2 @@
+Zrobiæ auto. Auto stoi na plane, ale plane siê nie porusza co najwy¿ej rotuje. Porusza siê tekstur¹ drogi, petli. 
+Na ekranie wyœwietliæ interfejs jakiœ, np czas i prêtkoœæ.
