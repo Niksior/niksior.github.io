@@ -29,25 +29,25 @@
     document.addEventListener('keydown', onDocumentKeyDown, false);
     document.addEventListener('keyup', onDocumentKeyUp, false);
 
-    var xu = 0, zu = 0.01;
+    var xu = 900, zu = 0, yu=0;
     function onDocumentKeyDown(event) {
         event = event || window.event;
         var keycode = event.keyCode;
         switch (keycode) {
             case 37: console.log("left down");
-                if (xu > -5) xu -= 0.1;
-
+                zu += 0.01;
+               
                 break;
             case 38: console.log("up down");
-                zu += 0.01;
+                xu += 1;
 
                 break;
             case 39: console.log("right down");
-                if (xu < 5) xu += 0.1;
+                zu -= 0.01;
 
                 break;
             case 40: console.log("down down");
-                zu -= 0.01;
+                xu -= 1;
 
                 break;
         }
@@ -57,13 +57,13 @@
         var keycode = event.keyCode;
         switch (keycode) {
             case 37: console.log("left up");
-
+               
                 break;
             case 38: console.log("up up");
 
                 break;
             case 39: console.log("right up");
-
+                
                 break;
             case 40: console.log("down up");
 
@@ -75,7 +75,7 @@
 
     var renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
-    renderer.setClearColor(0xDDDDDD, 1);
+    renderer.setClearColor(0x000000, 1);
     document.body.appendChild(renderer.domElement);
 
     var scene = new THREE.Scene();
@@ -102,15 +102,18 @@
     light.position.set(0, 100, 100);
     scene.add(light);
 
-    var Texture = new THREE.TextureLoader().load("road1.jpg");
+    var Texture = new THREE.TextureLoader().load("tor.png");
     var Material = new THREE.MeshBasicMaterial({ map: Texture, side: THREE.DoubleSide });
-    var Geometry = new THREE.PlaneGeometry(200, 500, 1, 1);
+    var Geometry = new THREE.PlaneGeometry(2000, 5000, 1, 1);
     var plane = new THREE.Mesh(Geometry, Material);
     plane.rotation.set(90, 0, 0);
-    plane.material.map.offset.y = 1.5;
+    plane.position.set(900, 0, 0);
+    //plane.material.map.offset.y = 1.5;
     scene.add(plane);
 
     function render() {
+        plane.rotation.z = zu;
+        plane.position.x = xu;
         requestAnimationFrame(render);
         renderer.render(scene, camera);
     }
