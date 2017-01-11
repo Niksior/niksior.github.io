@@ -29,7 +29,7 @@
     document.addEventListener('keydown', onDocumentKeyDown, false);
     document.addEventListener('keyup', onDocumentKeyUp, false);
 
-    var xu = 900, zu = 0, yu=0;
+    var xu = 0, zu = 0, yu=0;
     function onDocumentKeyDown(event) {
         event = event || window.event;
         var keycode = event.keyCode;
@@ -104,6 +104,7 @@
     var Texture = new THREE.TextureLoader().load("tor.png");
     Texture.wrapS = THREE.RepeatWrapping;
     Texture.wrapT = THREE.RepeatWrapping;
+    Texture.repeat.set( 1, 1 );
    
     var Material = new THREE.MeshBasicMaterial({ map: Texture, side: THREE.DoubleSide });
     var Geometry = new THREE.PlaneGeometry(2000, 5000, 1, 1);
