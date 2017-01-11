@@ -29,44 +29,83 @@
     document.addEventListener('keydown', onDocumentKeyDown, false);
     document.addEventListener('keyup', onDocumentKeyUp, false);
 
-    var xu = 0, zu = 0, yu=0;
+    var xu = 0, zu = 0, yu=0, w_down = false, s_down = false, a_down = false, d_down = false, key_up = false, key_down = false, key_left = false, key_right = false;
+	var delta_fi = 0.03, delta_fi2 = 2, delta_fi3 = 0.01, delta_dR = 0.0001, fi = 0, fi2 = 0, fi3 = 0, dR = 0, k = Math.PI / 180, fi_rad = 0;
+    
     function onDocumentKeyDown(event) {
         event = event || window.event;
         var keycode = event.keyCode;
         switch (keycode) {
-            case 37: console.log("left down");
-                zu -= 0.01;
-               
+            case 37:
+                console.log("left down");
+                key_left = true;
                 break;
-            case 38: console.log("up down");
-                xu -= 10;
-
+            case 38:
+                console.log("up down");
+                key_up = true;
                 break;
-            case 39: console.log("right down");
-                zu += 0.01;
-
+            case 39:
+                console.log("right down");
+                key_right = true;
                 break;
-            case 40: console.log("down down");
-                xu += 10;
-
+            case 40:
+                console.log("down down");
+                key_down = true;
+                break;
+            case 87:
+                console.log("z down");
+                w_down = true;
+                break;
+            case 83:
+                console.log("x down");
+                s_down = true;
+                break;
+            case 65:
+                console.log("z down");
+                a_down = true;
+                break;
+            case 68:
+                console.log("x down");
+                d_down = true;
                 break;
         }
     }
+
     function onDocumentKeyUp(event) {
         event = event || window.event;
         var keycode = event.keyCode;
         switch (keycode) {
-            case 37: console.log("left up");
-               
+            case 37:
+                console.log("left up");
+                key_left = false;
                 break;
-            case 38: console.log("up up");
-
+            case 38:
+                console.log("up up");
+                key_up = false;
                 break;
-            case 39: console.log("right up");
-                
+            case 39:
+                console.log("right up");
+                key_right = false;
                 break;
-            case 40: console.log("down up");
-
+            case 40:
+                console.log("down up");
+                key_down = false;
+                break;
+            case 87:
+                console.log("z down");
+                w_down = false;
+                break;
+            case 83:
+                console.log("x down");
+                s_down = false;
+                break;
+            case 65:
+                console.log("z down");
+                a_down = false;
+                break;
+            case 68:
+                console.log("x down");
+                d_down = false;
                 break;
         }
     }
@@ -102,24 +141,45 @@
     scene.add(light);
 
     var Texture = new THREE.TextureLoader().load("tor.png");
-    Texture.wrapS = THREE.RepeatWrapping;
-    Texture.wrapT = THREE.RepeatWrapping;
-    Texture.repeat.set( 1, 1 );
-   
+    Texture.generateMipmaps;
     var Material = new THREE.MeshBasicMaterial({ map: Texture, side: THREE.DoubleSide });
     var Geometry = new THREE.PlaneGeometry(2000, 5000, 1, 1);
     var plane = new THREE.Mesh(Geometry, Material);
     plane.position.set(0, 0, 0);
-    //plane.material.map.offset.x = 200;
     scene.add(plane);
 
     
 
     function render() {
-        plane.material.map.offset.z = xu;
-        plane.rotation.z = zu;
         requestAnimationFrame(render);
         renderer.render(scene, camera);
+        if (key_down == true) dR -= delta_dR;
+        if (key_up == true) dR += delta_dR;
+
+
+        if (key_left == true) {
+            fi -= delta_fi;
+            fi2 -= delta_fi2;
+        }
+        if (key_right == true) {
+            fi += delta_fi;
+            fi2 += delta_fi2;
+        }
+        if (w_down == true) {
+            camera.position.y += 5;
+        }
+        if (s_down == true) {
+            camera.position.y -= 5;
+        }
+        if (a_down == true) {
+            camera.position.x -= 5;
+        }
+        if (d_down == true) {
+            camera.position.x += 5;
+        }
+        plane.material.map.offset.y += dR * Math.cos(fi);
+        plane.material.map.offset.x += dR * Math.sin(fi);
+        plane.rotation.z = fi;
     }
     render();
 
