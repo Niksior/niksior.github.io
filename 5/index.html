@@ -170,7 +170,7 @@
 		k = "Your speed: " + ww + "clicks";
 		document.getElementById("clk").innerHTML = k;
 	}
-	plane.material.map.offset.x = 0.43;
+	plane.material.map.offset.x = -0.43;
     function render() {
         requestAnimationFrame(render);
         renderer.render(scene, camera);
@@ -201,7 +201,6 @@
         plane.material.map.offset.y += dR * Math.cos(fi);
         plane.material.map.offset.x += dR * Math.sin(fi);
         plane.rotation.z = fi;
-//console.log(plane.material.map.offset.x);
 	clock();
     }
 	
