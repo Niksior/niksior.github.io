@@ -179,7 +179,7 @@
 		}
 
 
-	plane.material.map.offset.x=-0.44; plane.material.map.offset.y = 0;
+	plane.material.map.offset.x=-0.47; plane.material.map.offset.y = 0;
 
 
     function render() {
@@ -215,8 +215,8 @@
         plane.material.map.offset.y += dR * Math.cos(fi);
         plane.material.map.offset.x += dR * Math.sin(fi);
  	
-	if(plane.material.map.offset.x > 0.50 || plane.material.map.offset.x < -0.50) restart();
-	if(plane.material.map.offset.y > 0.50 || plane.material.map.offset.x < -0.50) restart();
+	if(plane.material.map.offset.x > 0.6 || plane.material.map.offset.x < -0.8) restart();
+	if(plane.material.map.offset.y > 0.6 || plane.material.map.offset.x < -0.1) restart();
         plane.rotation.z = fi;
 	clock();
     }
