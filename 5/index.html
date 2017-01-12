@@ -12,7 +12,7 @@
         }
 	#clk {
 		padding: 20px;
-		font: 15px;
+		font-size: 15px;
 		border: 4px;
 		z-index: 20;
 		position: fixed;
@@ -163,7 +163,12 @@
     plane.position.set(0, 0, 0);
     scene.add(plane);
 
-    
+    function clock(){
+		var k;
+		console.log(dR);
+		k = "Your speed: " + dR + "clicks";
+		document.getElementById("clk").innerHTML = k;
+	}
 
     function render() {
         requestAnimationFrame(render);
@@ -195,15 +200,11 @@
         plane.material.map.offset.y += dR * Math.cos(fi);
         plane.material.map.offset.x += dR * Math.sin(fi);
         plane.rotation.z = fi;
+	clock();
     }
 	
-	function clock(){
-		var k;
-		console.log(dR);
-		k = "Your speed: " + dR + "clicks";
-		document.getElementById("clk").innerHTML = k;
-	}
-	clock();
+	
+	
     render();
 
     </script>
