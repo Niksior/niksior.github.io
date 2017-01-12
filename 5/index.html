@@ -8,7 +8,14 @@
             margin: 0;
             padding: 0;
             font-size: 0;
+	    z-index: 0;
         }
+	#clk {
+		padding: 20px;
+		font: 15px;
+		border: 4px;
+		z-index: 20;
+	}
     </style>
     <script src="js/three.min.js"></script>
     <script src="js/Animation.js"></script>
@@ -21,6 +28,7 @@
 
 
 <body id="zupa">
+	<div id="clk">...</div>
     <script>
 
     var WIDTH = window.innerWidth;
@@ -181,6 +189,12 @@
         plane.material.map.offset.x += dR * Math.sin(fi);
         plane.rotation.z = fi;
     }
+	
+	function clock(){
+		var k;
+		k = "Your speed: " + dR + "clicks";
+		document.getElementById("clk").innerHTML = k;
+	}
     render();
 
     </script>
