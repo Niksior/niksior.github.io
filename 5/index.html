@@ -166,7 +166,8 @@
 		var k;
 		var zw = dR*1000;
 		var ww = zw.toFixed(2);
-		k = "Your speed: " + ww + "clicks";
+		if(ww == 0.00) k="Use arrow keys";
+		else k = "Your speed: " + ww + "clicks";
 		document.getElementById("clk").innerHTML = k;
 	}
 
@@ -215,8 +216,8 @@
         plane.material.map.offset.y += dR * Math.cos(fi);
         plane.material.map.offset.x += dR * Math.sin(fi);
  	
-	if(plane.material.map.offset.x > 0.6 || plane.material.map.offset.x < -0.7) restart();
-	if(plane.material.map.offset.y > 0.6 || plane.material.map.offset.y < -0.3) restart();
+	if(plane.material.map.offset.x > 0.6 || plane.material.map.offset.x < -0.6) restart();
+	if(plane.material.map.offset.y > 0.6 || plane.material.map.offset.y < -0.5) restart();
         plane.rotation.z = fi;
 	clock();
     }
