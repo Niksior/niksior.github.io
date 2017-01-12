@@ -169,12 +169,26 @@
 		k = "Your speed: " + ww + "clicks";
 		document.getElementById("clk").innerHTML = k;
 	}
-	plane.material.map.offset.x = -0.44;
+
+	function restart(){
+		xu = 0; zu = 0; yu=0; w_down = false; s_down = false; a_down = false; d_down = false;
+		key_up = false; key_down = false; key_left = false; key_right = false;	
+		delta_fi = 0.03; delta_fi2 = 2; delta_fi3 = 0.01; delta_dR = 0.0001; fi = 0; fi2 = 0; fi3 = 0; dR = 0; k = Math.PI / 180, fi_rad = 0;
+		plane.material.map.offset.x=-0.44; plane.material.map.offset.y = 0;
+		alert("404 - road not found");
+		}
+
+
+	plane.material.map.offset.x=-0.44; plane.material.map.offset.y = 0;
+
+
     function render() {
         requestAnimationFrame(render);
         renderer.render(scene, camera);
-        if (key_down == true) dR -= delta_dR;
-        if (key_up == true) dR += delta_dR;
+
+
+        if (key_down == true) dR -= delta_dR;        
+	if (key_up == true) dR += delta_dR;
 
 
         if (key_left == true) {
@@ -197,8 +211,12 @@
         if (d_down == true) {
             camera.position.x += 5;
         }
+
         plane.material.map.offset.y += dR * Math.cos(fi);
         plane.material.map.offset.x += dR * Math.sin(fi);
+ 	
+	if(plane.material.map.offset.x > 0.50 || plane.material.map.offset.x < -0.50) restart();
+	if(plane.material.map.offset.y > 0.50 || plane.material.map.offset.x < -0.50) restart();
         plane.rotation.z = fi;
 	clock();
     }
