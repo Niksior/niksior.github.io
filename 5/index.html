@@ -165,8 +165,9 @@
 
     function clock(){
 		var k;
-		console.log(dR);
-		k = "Your speed: " + dR + "clicks";
+		var zw = dR*1000;
+		var ww = zw.toFixed(2);
+		k = "Your speed: " + ww + "clicks";
 		document.getElementById("clk").innerHTML = k;
 	}
 
