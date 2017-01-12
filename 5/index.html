@@ -34,7 +34,7 @@
 
 
 <body id="zupa">
-	<div id="clk">...</div>
+	<div id="clk">Use arrow keys</div>
     <script>
 
     var WIDTH = window.innerWidth;
@@ -174,12 +174,12 @@
 		xu = 0; zu = 0; yu=0; w_down = false; s_down = false; a_down = false; d_down = false;
 		key_up = false; key_down = false; key_left = false; key_right = false;	
 		delta_fi = 0.03; delta_fi2 = 2; delta_fi3 = 0.01; delta_dR = 0.0001; fi = 0; fi2 = 0; fi3 = 0; dR = 0; k = Math.PI / 180, fi_rad = 0;
-		plane.material.map.offset.x=-0.44; plane.material.map.offset.y = 0;
+		plane.material.map.offset.x=-0.45; plane.material.map.offset.y = 0;
 		alert("404 - road not found");
 		}
 
 
-	plane.material.map.offset.x=-0.47; plane.material.map.offset.y = 0;
+	plane.material.map.offset.x=-0.45; plane.material.map.offset.y = 0;
 
 
     function render() {
@@ -215,8 +215,8 @@
         plane.material.map.offset.y += dR * Math.cos(fi);
         plane.material.map.offset.x += dR * Math.sin(fi);
  	
-	if(plane.material.map.offset.x > 0.6 || plane.material.map.offset.x < -0.8) restart();
-	if(plane.material.map.offset.y > 0.6 || plane.material.map.offset.y < -0.1) restart();
+	if(plane.material.map.offset.x > 0.6 || plane.material.map.offset.x < -0.7) restart();
+	if(plane.material.map.offset.y > 0.6 || plane.material.map.offset.y < -0.3) restart();
         plane.rotation.z = fi;
 	clock();
     }
