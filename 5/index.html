@@ -158,7 +158,7 @@
     var Texture = new THREE.TextureLoader().load("tor.png");
     Texture.generateMipmaps;
     var Material = new THREE.MeshBasicMaterial({ map: Texture, side: THREE.DoubleSide });
-    var Geometry = new THREE.PlaneGeometry(2000, 5000, 1, 1);
+    var Geometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
     var plane = new THREE.Mesh(Geometry, Material);
     plane.position.set(0, 0, 0);
     scene.add(plane);
@@ -201,6 +201,7 @@
         plane.material.map.offset.y += dR * Math.cos(fi);
         plane.material.map.offset.x += dR * Math.sin(fi);
         plane.rotation.z = fi;
+console.log(plane.material.map.offset.x);
 	clock();
     }
 	
