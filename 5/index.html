@@ -20,6 +20,8 @@
 		left: 20px;
 		height: 100px;
 		width: 100px;
+		background: white;
+		color: black;
 	}
     </style>
     <script src="js/three.min.js"></script>
@@ -139,7 +141,7 @@
     scene.add(camera);
 
     var cloader = new THREE.ColladaLoader();
-    cloader.load('mustang.DAE', function (collada) {
+    cloader.load('mu/mustang.DAE', function (collada) {
         sofa = collada.scene;
         sofa.position.set(0, 0, 0);
         sofa.scale.set(20, 20, 20);
@@ -200,6 +202,7 @@
 		k = "Your speed: " + dR + "clicks";
 		document.getElementById("clk").innerHTML = k;
 	}
+	clock();
     render();
 
     </script>
