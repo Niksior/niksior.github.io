@@ -13,7 +13,7 @@
 	#clk {
 		padding: 20px;
 		font-size: 15px;
-		border: 4px;
+		border: 5px;
 		z-index: 20;
 		position: fixed;
 		top: 20px;
@@ -23,6 +23,7 @@
 		background: black;
 		color: red;
         border-color: palevioletred;
+        border-style: dotted;
 	}
     </style>
     <script src="js/three.min.js"></script>
@@ -33,7 +34,8 @@
 
 </head>
 
-
+    
+    
 
 <body id="zupa">
 	<div id="clk">Use arrow keys</div>
@@ -86,6 +88,11 @@
                 break;
         }
     }
+
+    var img = document.getElementById('zupa');
+    var pixelData = canvas.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
+
+
 
     function onDocumentKeyUp(event) {
         event = event || window.event;
